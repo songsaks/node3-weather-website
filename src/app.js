@@ -6,7 +6,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
-// Define paths for Express config
+// Define paths for Express config df
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname,'../templates/views') //--> Change from 'views' folder(default name of 'handlebars') to templates(folder that we create)
 const partialsPath = path.join(__dirname, '../templates/partials')
