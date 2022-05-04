@@ -6,6 +6,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 // Define paths for Express config df
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname,'../templates/views') //--> Change from 'views' folder(default name of 'handlebars') to templates(folder that we create)
@@ -105,8 +106,8 @@ app.get('*',(req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port+ '.')
 })
 
 //nodemon .\src\app.js -e js,hbs --> the command that let the nodemon to monitor file that has extend js ans hbs
